@@ -24,3 +24,5 @@
 //     logPhrase(game.getRandomPhrase());
 //     logPhrase(game.getRandomPhrase());
     
+const game = new Game();
+game.getRandomPhrase().addPhraseToDisplay();
