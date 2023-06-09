@@ -10,6 +10,8 @@ this.phrases = [
 ],
 this.activePhrase = null;
     }
+    //
+    
 
     getRandomPhrase() {
 
