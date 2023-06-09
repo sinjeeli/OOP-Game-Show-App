@@ -30,5 +30,29 @@ phraseContainer.appendChild(li);
 
     });
 }
-    
+
+checkLetter(letter) {
+
+    return this.phrase.includes(letter);
+
 }
+showMatchedLetter(letter) {
+
+    const letterElements  = document.querySelectorAll('.letter');
+    letterElements.forEach((element)=>{
+        if(element.textContent === letter){
+            
+            element.classList.remove('hide');
+            element.classList.add('show');
+
+        }
+        
+
+    })
+
+        
+
+    }
+}
+    
+
