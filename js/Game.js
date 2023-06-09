@@ -1,13 +1,13 @@
 class Game {
     constructor() {
-this.missed = 0,
+this.missed = 0;
 this.phrases = [
-    new Phrase("aHello world"),
-    new Phrase("aworld"),
     new Phrase("afun"),
-    new Phrase("alove"),
-    new Phrase("apower")
-],
+    new Phrase("afun"),
+    new Phrase("afun"),
+    new Phrase("afun"),
+    new Phrase("afun")
+];
 this.activePhrase = null;
 
     }
@@ -48,7 +48,9 @@ this.activePhrase = null;
 
         const scoreboard = document.querySelector('#scoreboard ol');
         const lives = scoreboard.querySelectorAll('li');
-        lives[this.missed - 1].classList.replace('tries', 'missed');
+        //lives[this.missed].classList.replace('tries', 'missed');
+        lives[this.missed].firstElementChild.src = 'images/lostHeart.png';
+
             if(this.missed >= 5) {
                 this.gameOver(false);
 
