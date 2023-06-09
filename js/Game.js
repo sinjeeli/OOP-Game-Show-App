@@ -2,11 +2,11 @@ class Game {
     constructor() {
 this.missed = 0,
 this.phrases = [
-    new Phrase("Hello world"),
-    new Phrase("world"),
-    new Phrase("fun"),
-    new Phrase("love"),
-    new Phrase("power")
+    new Phrase("aHello world"),
+    new Phrase("aworld"),
+    new Phrase("afun"),
+    new Phrase("alove"),
+    new Phrase("apower")
 ],
 this.activePhrase = null;
 
@@ -38,11 +38,11 @@ this.activePhrase = null;
             if(!letterElements[i].classList.contains('show')){
                    return false; 
             }
-            else {
+        }
                 return true;
             }
-        }
-    }
+        
+    
 
     removeLife() {
 
