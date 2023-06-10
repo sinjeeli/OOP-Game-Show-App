@@ -16,7 +16,7 @@ addPhraseToDisplay() {
 
     let phraseContainer = document.querySelector(' #phrase ul');
 
-    let charArray = this.phrase.split(' ');
+    let charArray = this.phrase.split('');
 //
 
     charArray.forEach((param) =>{
