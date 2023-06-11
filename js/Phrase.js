@@ -24,10 +24,10 @@ addPhraseToDisplay() {
         if(param === " "){
             li.className = 'space';
         }
-        if(param !== ' '){
+        else {
             li.className = `hide letter ${param}`;
         }
-
+        li.textContent = param;
         phraseContainer.appendChild(li)
     })
 
