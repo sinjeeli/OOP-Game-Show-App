@@ -70,6 +70,37 @@ checkForWin() {
 
         return true;
         }
+
+        ////////////////////////////////////////////////////
+        /**
+* Increases the value of the missed property
+* Removes a life from the scoreboard
+* Checks if player has remaining lives and ends game if player is out
+*/
+removeLife() {
+
+    this.missed ++;
+
+    let heartElement = document.getElementsByClassName('tries');
+    heartElement = heartElement[this.missed - 1];
+    heartElement.firstChild.src = 'images/lostHeart.png';
+
+    if (this.missed === 5) {
+        this.gameOver(false);
+
+
+
+
+};
+
+/**
+* Displays game over message
+* @param {boolean} gameWon - Whether or not the user won the game
+*/
+gameOver(gameWon) {
+
+};
+
     }
 
 
