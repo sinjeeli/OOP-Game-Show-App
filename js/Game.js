@@ -51,6 +51,27 @@ startGame() {
         gameStart.addPhraseToDisplay();
 };
 
-};
+/**
+* Checks for winning move
+* @return {boolean} True if game has been won, false if game wasn't
+won
+*/
+checkForWin() {
+
+    const letterElements = document.querySelectorAll('.letter');
+
+    for(let i = 0; i < letterElements.length; i++){
+        if(!letterElements[i].style.color === 'transparent'){
+
+            return false;
+            } 
+
+        }
+
+        return true;
+        }
+    }
+
+
 
 
