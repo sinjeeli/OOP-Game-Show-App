@@ -44,11 +44,11 @@ startGame() {
 
         this.activePhrase = gameStart;
         
-        let phraseInstance = new Phrase(gameStart.phrase);
-        phraseInstance.addPhraseToDisplay();
+       //let phraseInstance = new Phrase(gameStart.phrase);
+        //phraseInstance.addPhraseToDisplay();
 
         //gameStart = this.addPhraseToDisplay();
-
+        gameStart.addPhraseToDisplay();
 };
 
 };

@@ -41,31 +41,25 @@ addPhraseToDisplay() {
 
 checkLetter(letter) {
 
-    const game = new Game();
+    const phrase = this.phrase.toLowerCase();
 
-const phrase = game.activePhrase.toLowerCase();
-
-if(!activePhrase) {
-    
-    console.error('No active phrase set');
-    return false;
+    letter = letter.toLowerCase();
+    return phrase.includes(letter);
 
 }
 
-
-
-letter = letter.toLowerCase();
-if (phrase.includes(letter)) {
-    console.log('true');
-return true;
-
-} else {
-    console.log('false');
-return false;
-
-
-
-}
-};
+/**
+* Displays passed letter on screen after a match is found
+* @param (string) letter - Letter to display
+*/
+showMatchedLetter(letter) {
+    const letterElements = document.querySelectorAll('.letter');
+    letterElements.forEach((element) => {
+      if (element.textContent.toLowerCase() === letter.toLowerCase()) {
+        //element.classList.remove('hide');
+        element.style.backgroundColor = '#4ac0d5';
+      }
+    });
+  }
 
 };
