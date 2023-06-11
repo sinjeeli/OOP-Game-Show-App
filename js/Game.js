@@ -7,17 +7,17 @@ class Game {
         this.missed = 0;
         this.phrases = [
             
-               new Phrase ('My name'),
-               new Phrase ('that I'),
-               new Phrase ('had received'),
-               new Phrase ('before the'),
-               new Phrase ('ceremony time')
+               new Phrase ('aMy name'),
+               new Phrase ('athat I'),
+               new Phrase ('ahad received'),
+               new Phrase ('abefore the'),
+               new Phrase ('aceremony time')
 
             
 
         ];
 
-        this.activePhase = 'null';
+        this.activePhrase = 'null';
 
     }
 

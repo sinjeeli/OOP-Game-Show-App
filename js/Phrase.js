@@ -33,7 +33,39 @@ addPhraseToDisplay() {
 
 };
 
+/**
+* Checks if passed letter is in phrase
+* @param (string) letter - Letter to check
+*/
+
+
+checkLetter(letter) {
+
+    const game = new Game();
+
+const phrase = game.activePhrase.toLowerCase();
+
+if(!activePhrase) {
+    
+    console.error('No active phrase set');
+    return false;
+
+}
+
+
+
+letter = letter.toLowerCase();
+if (phrase.includes(letter)) {
+    console.log('true');
+return true;
+
+} else {
+    console.log('false');
+return false;
 
 
 
 }
+};
+
+};
