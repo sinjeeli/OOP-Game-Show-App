@@ -81,6 +81,8 @@ removeLife() {
         this.gameOver(false);
 };
 
+console.log(this.missed)
+
 }
 //
 /**
@@ -93,7 +95,7 @@ gameOver(gameWon) {
 
     overlay.style.display = 'flex';
 
-    if(gameWon) {
+    if(gameWon === 'win') {
         overlay.classList.remove('start', 'lose');
         overlay.classList.add('win');
         overLayTitle.textContent = 'Congratulations! You won!';
@@ -107,9 +109,36 @@ gameOver(gameWon) {
 
     }
 
+
 }
 
-    
+handleInteraction(button) {
+    button.disabled = true;
+
+    if (this.activePhrase.checkLetter(button.innerText)) {
+        button.classList.add('chosen');
+        this.activePhrase.showMatchedLetter(button.innerText);
+
+        if (this.checkForWin()) {
+            this.gameOver('win');
+        }
+    } else {
+        button.classList.add('wrong');
+        this.removeLife();
+
+        if (this.missed === 5) {
+            this.gameOver('lose');
+        }
+    }
+    console.log(button)
+}
+
+
+gameReset() {
+
+
+
+}
 
 
 

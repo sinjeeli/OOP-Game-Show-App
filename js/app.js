@@ -42,3 +42,14 @@ btnRest.addEventListener('click',(event) =>{
 
 
 } );
+
+const keyboard = document.getElementById('qwerty');
+keyboard.addEventListener('click', (event)=>{
+
+    if(event.target.tagName === 'BUTTON') {
+
+        game.handleInteraction(event.target);
+    }
+
+
+})
