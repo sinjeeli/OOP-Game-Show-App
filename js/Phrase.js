@@ -3,34 +3,34 @@
  * Game.js */
 
 class Phrase {
-    constructor(phrase) {
+  constructor(phrase) {
 
-        this.phrase = phrase.toLowerCase();
+      this.phrase = phrase.toLowerCase();
 
-    }
+  }
 
-    /**
+  /**
 * Display phrase on game board
 */
 addPhraseToDisplay() {
 
-    const ul = document.querySelector('ul');
+  const ul = document.querySelector('ul');
 
-    [...this.phrase].forEach((param) => {
-        const li = document.createElement('li');
+  [...this.phrase].forEach((param) => {
+      const li = document.createElement('li');
 
-        ul.append(li);
-        if(param === " "){
-            li.classList.add('space');
-            li.innerHTML = ' ';
-        }
-        else {
-            li.classList.add('hide', 'letter', param);
-            li.innerHTML = param;
-        }
-       
-        
-    })
+      ul.append(li);
+      if(param === " "){
+          li.classList.add('space');
+          li.innerHTML = ' ';
+      }
+      else {
+          li.classList.add('hide', 'letter', param);
+          li.innerHTML = param;
+      }
+     
+      
+  })
 
 };
 
@@ -42,10 +42,10 @@ addPhraseToDisplay() {
 
 checkLetter(letter) {
 
-    const phrase = this.phrase.toLowerCase();
+  const phrase = this.phrase.toLowerCase();
 
-    letter = letter.toLowerCase();
-    return phrase.includes(letter);
+  letter = letter.toLowerCase();
+  return phrase.includes(letter);
 
 }
 
@@ -54,14 +54,14 @@ checkLetter(letter) {
 * @param (string) letter - Letter to display
 */
 showMatchedLetter(letter) {
-    const letterElements = document.querySelectorAll('.letter');
-    letterElements.forEach((element) => {
-      if (element.textContent.toLowerCase() === letter.toLowerCase()) {
-        element.classList.remove('hide');
-        element.classList.add('show');
+  const letterElements = document.querySelectorAll('.letter');
+  letterElements.forEach((element) => {
+    if (element.textContent.toLowerCase() === letter.toLowerCase()) {
+      element.classList.remove('hide');
+      element.classList.add('show');
 
-      }
-    });
-  }
+    }
+  });
+}
 
 };
