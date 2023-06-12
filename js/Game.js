@@ -82,6 +82,7 @@ removeLife() {
 };
 
 }
+//
 /**
 * Displays game over message
 * @param {boolean} gameWon - Whether or not the user won the game
