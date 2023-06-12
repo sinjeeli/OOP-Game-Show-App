@@ -134,14 +134,8 @@ handleInteraction(button) {
 }
 
 
-gameReset() {
 
 
 
 }
-
-
-
-}
-
 
