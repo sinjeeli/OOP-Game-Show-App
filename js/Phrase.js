@@ -14,21 +14,22 @@ class Phrase {
 */
 addPhraseToDisplay() {
 
-    let phraseContainer = document.querySelector(' #phrase ul');
+    const ul = document.querySelector('ul');
 
-    let charArray = this.phrase.split('');
-//
+    [...this.phrase].forEach((param) => {
+        const li = document.createElement('li');
 
-    charArray.forEach((param) =>{
-        let li = document.createElement('li');
+        ul.append(li);
         if(param === " "){
-            li.className = 'space';
+            li.classList.add('space');
+            li.innerHTML = ' ';
         }
         else {
-            li.className = `hide letter ${param}`;
+            li.classList.add('hide', 'letter', param);
+            li.innerHTML = param;
         }
-        li.textContent = param;
-        phraseContainer.appendChild(li)
+       
+        
     })
 
 };
@@ -56,8 +57,9 @@ showMatchedLetter(letter) {
     const letterElements = document.querySelectorAll('.letter');
     letterElements.forEach((element) => {
       if (element.textContent.toLowerCase() === letter.toLowerCase()) {
-        //element.classList.remove('hide');
-        element.style.backgroundColor = '#4ac0d5';
+        element.classList.remove('hide');
+        element.classList.add('show');
+
       }
     });
   }

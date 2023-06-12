@@ -90,7 +90,10 @@ button {
 }
 
 
-/* Phrase */
+/* .hide {
+  visibility: hidden;
+}
+Phrase */
 
 .letter {
   font-size: var(--font-size-medium);

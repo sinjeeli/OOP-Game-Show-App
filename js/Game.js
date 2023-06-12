@@ -12,9 +12,6 @@ class Game {
                new Phrase ('ahad received'),
                new Phrase ('abefore the'),
                new Phrase ('aceremony time')
-
-            
-
         ];
 
         this.activePhrase = 'null';
@@ -58,18 +55,12 @@ won
 */
 checkForWin() {
 
-    const letterElements = document.querySelectorAll('.letter');
+    let letterElements = document.querySelectorAll('.hide');
+    if(letterElements.length === 0){
+            return true;
+    }
 
-    for(let i = 0; i < letterElements.length; i++){
-        if(!letterElements[i].style.color === 'transparent'){
-
-            return false;
-            } 
-
-        }
-
-        return true;
-        }
+}
 
         ////////////////////////////////////////////////////
         /**
@@ -77,6 +68,7 @@ checkForWin() {
 * Removes a life from the scoreboard
 * Checks if player has remaining lives and ends game if player is out
 */
+
 removeLife() {
 
     this.missed ++;
