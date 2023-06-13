@@ -138,32 +138,47 @@ handleInteraction(button) {
 
 gameReset() {
     //
-    
+// Step 1: Identify the Phrase ul element in your HTML markup
+var phraseUl = document.getElementById('phrase').querySelector('ul');
+
+// Step 2: Remove all li elements from the Phrase ul
+while (phraseUl.firstChild) {
+  phraseUl.removeChild(phraseUl.firstChild);
+}
 
 
 
-    let listItem = [];
-    listItem = document.querySelectorAll('.letter');
-    listItem.forEach(l => l.parentNode.removeChild(l));
 
-    let spaces = [];
-    spaces = document.querySelectorAll('.space');
-    spaces.forEach(space => space.parentNode.removeChild(space));
 
-    let image = [];
-   image = document.querySelectorAll('img');
-   image.forEach(img => {
-   img.src= 'images/liveHeart.png';
+
+
+
+
+
+//     let listItem = [];
+//     listItem = document.querySelectorAll('.letter');
+//     listItem.forEach(l => l.parentNode.removeChild(l));
+
+//     let spaces = [];
+//     spaces = document.querySelectorAll('.space');
+//     spaces.forEach(space => space.parentNode.removeChild(space));
+
+//     let image = [];
+//    image = document.querySelectorAll('img');
+//    image.forEach(img => {
+//    img.src= 'images/liveHeart.png';
                 
-   });
+//    });
 
     
-    let keys = [];
-   keys = document.querySelectorAll('.key');
-   keys.forEach(key => {                               // Enable all keys
-       key.removeAttribute("disabled");
-       key.className = "key";
-   });
+//     let keys = [];
+//    keys = document.querySelectorAll('.key');
+//    keys.forEach(key => {                               // Enable all keys
+//        key.removeAttribute("disabled");
+//        key.className = "key";
+//    });
 
+
+}
 
 }
