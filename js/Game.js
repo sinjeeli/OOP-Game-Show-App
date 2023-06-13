@@ -7,11 +7,11 @@ class Game {
         this.missed = 0;
         this.phrases = [
             
-               new Phrase ('aMy name'),
-               new Phrase ('athat I'),
-               new Phrase ('ahad received'),
-               new Phrase ('abefore the'),
-               new Phrase ('aceremony time')
+               new Phrase ('Leak Proof'),
+               new Phrase ('Ice Blocker'),
+               new Phrase ('Soccer Shoes'),
+               new Phrase ('Swim Trunks'),
+               new Phrase ('Pizza Rolls')
         ];
 
         this.activePhrase = 'null';
@@ -106,10 +106,8 @@ gameOver(gameWon) {
         overlay.classList.add('lose');
         overLayTitle.textContent = 'Oops! You lost. Try again!';
 
-
     }
     this.gameReset();
-
 
 }
 
@@ -135,7 +133,6 @@ handleInteraction(button) {
 }
 
 
-
 gameReset() {
     //
 // Step 1: Identify the Phrase ul element in your HTML markup
@@ -153,7 +150,6 @@ idScoreboard.forEach((element)=>{
 
 });
 
-
 ////////////////////////////////////////////////////////////////
 var onscreenKeyboardButton = Array.from(document.querySelectorAll('#qwerty button'));
 
@@ -165,38 +161,9 @@ button.classList.add('key');
 
 ////////////////////////////////////////////////////
 
-
-
-
-
-
-
-
-
-//     let listItem = [];
-//     listItem = document.querySelectorAll('.letter');
-//     listItem.forEach(l => l.parentNode.removeChild(l));
-
-//     let spaces = [];
-//     spaces = document.querySelectorAll('.space');
-//     spaces.forEach(space => space.parentNode.removeChild(space));
-
-//     let image = [];
-//    image = document.querySelectorAll('img');
-//    image.forEach(img => {
-//    img.src= 'images/liveHeart.png';
-                
-//    });
-
-    
-//     let keys = [];
-//    keys = document.querySelectorAll('.key');
-//    keys.forEach(key => {                               // Enable all keys
-//        key.removeAttribute("disabled");
-//        key.className = "key";
-//    });
-
-
 }
 
 }
+
+//project complete
+//code in working state
