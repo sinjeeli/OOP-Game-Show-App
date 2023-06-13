@@ -145,7 +145,17 @@ var phraseUl = document.getElementById('phrase').querySelector('ul');
 while (phraseUl.firstChild) {
   phraseUl.removeChild(phraseUl.firstChild);
 }
+/////////////////////////////////////////////////////////////////////
 
+var onscreenKeyboardButton = Array.from(document.querySelectorAll('#qwerty button'));
+
+onscreenKeyboardButton.forEach((button)=>{
+button.disabled = false;
+button.classList.remove('chosen', 'wrong');
+button.classList.add('key');
+});
+
+////////////////////////////////////////////////////
 
 
 
