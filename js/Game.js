@@ -108,6 +108,7 @@ gameOver(gameWon) {
 
 
     }
+    this.gameReset();
 
 
 }
@@ -134,7 +135,35 @@ handleInteraction(button) {
 }
 
 
+
+gameReset() {
+    //
     
+
+
+
+    let listItem = [];
+    listItem = document.querySelectorAll('.letter');
+    listItem.forEach(l => l.parentNode.removeChild(l));
+
+    let spaces = [];
+    spaces = document.querySelectorAll('.space');
+    spaces.forEach(space => space.parentNode.removeChild(space));
+
+    let image = [];
+   image = document.querySelectorAll('img');
+   image.forEach(img => {
+   img.src= 'images/liveHeart.png';
+                
+   });
+
+    
+    let keys = [];
+   keys = document.querySelectorAll('.key');
+   keys.forEach(key => {                               // Enable all keys
+       key.removeAttribute("disabled");
+       key.className = "key";
+   });
 
 
 }
