@@ -146,7 +146,15 @@ while (phraseUl.firstChild) {
   phraseUl.removeChild(phraseUl.firstChild);
 }
 /////////////////////////////////////////////////////////////////////
+var idScoreboard = document.querySelectorAll('img');
 
+idScoreboard.forEach((element)=>{
+    element.src = 'images/liveHeart.png';
+
+});
+
+
+////////////////////////////////////////////////////////////////
 var onscreenKeyboardButton = Array.from(document.querySelectorAll('#qwerty button'));
 
 onscreenKeyboardButton.forEach((button)=>{
